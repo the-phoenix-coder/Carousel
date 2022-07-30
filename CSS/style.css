@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    justify-content: center;
+}
+.carousel {
+    width: 600px;
+    height: 300px;
+    position: relative;
+}
+.carousel span.no {
+    background-color: rgba(153, 51, 204, 0.616);
+    color: white;
+    padding: 0 .5rem;
+    border-radius: .5rem;
+    position: absolute;
+    z-index: 10;
+}
+.carousel img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    object-fit: cover;
+}
+.carousel img.active {
+    display: block;
+}
+.concon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin-top: 6px;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgb(153, 51, 204);
+}
+ul li:hover,
+ul li.active {
+    background-color: rgb(153, 51, 204);
+    border: none;
+}
+button {
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    background-color: #9933cc;
+    color: white;
+    padding: .5rem;
+}
+button:hover {
+    background-color: #7822a3;
+}
+button.disabled {
+    background-color: #9933cc6c;
+    pointer-events: none;
+    user-select: none;
+}
